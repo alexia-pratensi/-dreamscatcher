@@ -1,0 +1,39 @@
+.form {
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #F2D9FC;
+  border-radius: 100px;
+  position: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #29202D;
+}
+
+.title {
+  text-align: center;
+}
+
+.bloc {
+  display: flex;
+  justify-content: space-between;
+  .name-price {
+    display: flex;
+    // justify-content: space-between;
+    width: 50%;
+  }
+  // .photo-details {
+  //   width: 100%;
+  // }
+}
+
+.col-sm-4 {
+  width: 70%
+}
