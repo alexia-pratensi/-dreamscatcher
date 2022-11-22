@@ -1,0 +1,13 @@
+
+<div class='container'>
+<h1>Je crée mon rêve</h1>
+  <div class="container">
+    <%= simple_form_for @dream do |f| %>
+      <%= f.input :name %>
+      <%= f.input :details %>
+      <%= f.input :price %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
