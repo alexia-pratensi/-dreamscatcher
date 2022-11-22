@@ -1,5 +1,5 @@
-<h1>Choisi ici le rêve de tes rêves</h1>
-<div class="container">
+<div class="cards-container">
+  <h1>Choisis ici le rêve de tes rêves</h1>
 
   <% @dreams.each do |dream| %>
     <div class="card" style="width: 18rem;">
@@ -7,12 +7,12 @@
       <%= cl_image_tag dream.photo.key, crop: :fill, class:'image-card' %>
       </div>
       <div class="card-body">
-        <div class="name-price">
+        <div class="card-name-price">
         <h5 class="card-title"><%=dream.name%></h5>
         <h5 class="card-title price"><%=dream.price%>€</h5>
         </div>
         <p class="card-text"><%=dream.details%></p>
-        <a href="#" class="btn-flat ">Go somewhere</a>
+        <a href="#" class="btn-flat index-btn">Go somewhere</a>
       </div>
     </div>
     <%end%>

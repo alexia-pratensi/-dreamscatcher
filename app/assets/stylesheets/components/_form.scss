@@ -1,5 +1,5 @@
-.form {
-  width: 80%;
+.box-container {
+  width: 60%;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
@@ -8,13 +8,14 @@
   background-color: #F2D9FC;
   border-radius: 100px;
   position: center;
+  justify-content: center;
+  align-items: center;
+  color: #29202D;
 }
 
-body {
+.form {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #29202D;
 }
 
 .title {
@@ -26,7 +27,7 @@ body {
   justify-content: space-between;
   .name-price {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     width: 50%;
   }
   // .photo-details {

@@ -1,7 +1,7 @@
-.container {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-gap: 8px;
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
   justify-content: center;
 }
 
@@ -22,19 +22,17 @@
   width: 300px;
   position: relative;
 }
-.name-price {
+.card-name-price {
   display: flex;
   justify-content: space-between;
 }
 
-
 .image-card {
   max-height: 100%;
   max-width: 100%;
-
 }
 
-.btn-flat {
+.index-btn {
   color: #29202D;
   padding: 8px 24px;
   border-radius: 4px;
