@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Choisi ici le rêve de tes rêves</h1>
+  <% @dreams.each do |dream| %>
+    <div class="card-product">
+      <%= cl_image_tag dream.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="card-product-infos">
+        <h2><%=dream.name%></h2>
+        <p><%=dream.details%></p>
+        <h2><%=dream.price%></h2>
+      </div>
+    </div>
+  <%end%>
+</div>
