@@ -9,12 +9,6 @@ class DreamsController < ApplicationController
 
   end
 
-  def edit
-  end
-
-  def updated
-  end
-
   def new
     @dream = Dream.new
   end
