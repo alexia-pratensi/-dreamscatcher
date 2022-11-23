@@ -11,8 +11,8 @@
     <div class= "show-infos" >
       <%= @dream.details %> ! <br>
       <p> <%= @dream.price %> € </p> <br>
-      <a class="btn btn-flat" href="/dreams">Réservez!</a>
+      <%= link_to 'Réservez!', new_dream_reservation_path(@dream), class:'btn btn-flat' %>
+      <a class="btn btn-flat" href="/dreams">Retour</a>
     </div>
   </div>
-
 </div>
