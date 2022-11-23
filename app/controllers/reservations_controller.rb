@@ -1,10 +1,11 @@
 class ReservationsController < ApplicationController
   def new
+    @dream = Dream.find(params[:dream_id])
     @reservation = Reservation.new
   end
 
   def create
-    @dream = Dream.find(params[:id])
+    @dream = Dream.find(params[:dream_id])
     # @reservation.user_id = current_user.id
     @reservation = Reservation.new(reservation_params)
     @reservation.dream = @dream
