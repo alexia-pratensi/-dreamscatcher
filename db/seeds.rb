@@ -39,6 +39,6 @@ dream_reconfortant.photo.attach(io: file_reconfortant, filename: "reconfortant.j
 dream_reconfortant.save
 
 file_futuriste = URI.open('https://res.cloudinary.com/dsef2i7mv/image/upload/v1669118626/futuriste_uhgqgg.jpg')
-dream_futuriste = Dream.new(name: "Rêve futuriste", details: "Rêve qui te promets un voyage dans le temps inoubliale", price: 130,  user: user2)
+dream_futuriste = Dream.new(name: "Rêve futuriste", details: "Rêve qui te promet un voyage dans le temps inoubliale", price: 130,  user: user2)
 dream_futuriste.photo.attach(io: file_futuriste, filename: "reconfortant.jpg", content_type: "image/jpg")
 dream_futuriste.save
