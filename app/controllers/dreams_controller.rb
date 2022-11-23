@@ -1,16 +1,20 @@
 class DreamsController < ApplicationController
-
+  # before_action :set_dream, only: [:show]
 
   def index
     @dreams = Dream.all
   end
 
-  def edit
+  def show
+    # @dream = Dream.find(set_dream)
+  end
 
+  def edit
   end
 
   def updated
   end
+
   def new
     @dream = Dream.new
   end
@@ -30,4 +34,8 @@ class DreamsController < ApplicationController
   def dream_params
     params.require(:dream).permit(:name, :details, :price, :photo)
   end
+
+  # def set_dream
+  #   @dream = Dream.find(params[:id])
+  # end
 end
