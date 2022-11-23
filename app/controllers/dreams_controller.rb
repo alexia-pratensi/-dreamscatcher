@@ -8,15 +8,6 @@ class DreamsController < ApplicationController
   def show
   end
 
-  def edit
-  end
-
-  def updated
-    @dream.update(dream_params)
-
-    redirect_to dream_path(@dream)
-  end
-
   def new
     @dream = Dream.new
   end
@@ -29,6 +20,15 @@ class DreamsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @dream.update(dream_params)
+
+    redirect_to dream_path(@dream)
   end
 
   private

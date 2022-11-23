@@ -1,5 +1,4 @@
 
-
 <div class='form'>
   <div class='box-container' style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://res.cloudinary.com/dsef2i7mv/image/upload/v1669148676/fond-pastel-couleur-abstraite-ciel-doux-fond-nuage-couleur-pastel_6529-2_ledfr4.webp)">
     <div class="row justify-content-center">
@@ -9,19 +8,19 @@
             <%= simple_form_for @dream do |f| %>
               <div class='name-price'>
               <div class='one'>
-              <%= f.input :name, value: 'Nom du rêve' %>
+              <%= f.input :name, label: 'Nom du rêve' %>
               </div>
               <div class='two'>
-              <%= f.input :price %>
+              <%= f.input :price, label: 'Prix du rêve' %>
               </div>
               </div>
               <div class='photo-details'>
               <%= f.input :photo, as: :file %>
               </div>
               <div class='photo-details'>
-              <%= f.input :details %>
+              <%= f.input :details, label: 'Description du rêve' %>
               </div>
-              <%= f.submit class:"btn btn-danger create-btn"%>
+              <%= f.submit class:"btn btn-danger create-btn", label: 'Je confirme mon rêve'%>
             <% end %>
           </div>
       </div>
