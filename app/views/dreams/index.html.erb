@@ -4,7 +4,7 @@
   <% @dreams.each do |dream| %>
     <div class="card" style="width: 18rem;">
       <div class="image-container">
-        <%= cl_image_tag dream.photo.key, crop: :fill, class:'image-card' %>
+        <%= cl_image_tag dream.photo.key, class:'image-card' %>
       </div>
       <div class="card-body">
         <div class="card-name-price">
