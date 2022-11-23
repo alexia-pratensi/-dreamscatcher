@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   color: #29202D;
+  box-sizing: unset;
 }
 
 .form {
@@ -20,6 +21,7 @@
 
 .title {
   text-align: center;
+  color: white;
 }
 
 .bloc {
@@ -28,13 +30,31 @@
   .name-price {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
   }
-  // .photo-details {
-  //   width: 100%;
-  // }
 }
 
 .col-sm-4 {
-  width: 70%
+  width: 100%;
+}
+
+// .create-btn {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   align-content: center;
+// }
+
+.create-btn {
+  border-radius: 10px;
+  color: #29202d;
+  padding: 8px 24px;
+  transition: background 0.3s ease;
+  background: #fdd9d9;
+  margin-left: 100px;
+}
+
+.create-btn:hover {
+  background: #cef3f0;
+  color: #29202d;
 }
