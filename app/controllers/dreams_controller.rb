@@ -1,5 +1,5 @@
 class DreamsController < ApplicationController
-  before_action :set_dream, only: [:show]
+  before_action :set_dream, only: [:show, :edit, :update]
 
   def index
     @dreams = Dream.all
@@ -26,6 +26,15 @@ class DreamsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @dream.update(dream_params)
+
+    redirect_to dream_path(@dream)
   end
 
   private

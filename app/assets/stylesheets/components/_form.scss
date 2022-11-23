@@ -1,3 +1,7 @@
+html {
+  background: white;
+}
+
 .box-container {
   width: 60%;
   padding-top: 50px;
@@ -5,7 +9,6 @@
   display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
-  background-color: #F2D9FC;
   border-radius: 100px;
   position: center;
   justify-content: center;
@@ -15,6 +18,7 @@
 }
 
 .form {
+  background: white;
   display: flex;
   justify-content: center;
 }
