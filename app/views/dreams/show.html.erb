@@ -1,3 +1,18 @@
-<%# <%= @dream.name %>
-<%# <%= @dream.details %>
-<%# <%= @dream.price %>
+<div class="show-container">
+
+  <div class= "show-h2">
+    <h2><b><%= @dream.name %></b></h2>
+  </div>
+
+  <div class="show-bloc">
+    <div class= "show-img">
+      <%= cl_image_tag @dream.photo.key , crop: :fill , height: 400 , width: 700 %>
+    </div>
+    <div class= "show-infos" >
+      <%= @dream.details %> ! <br>
+      <p> <%= @dream.price %> € </p> <br>
+      <a class="btn btn-flat" href="/dreams">Réservez!</a>
+    </div>
+  </div>
+
+</div>

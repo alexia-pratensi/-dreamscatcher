@@ -33,7 +33,7 @@ h2 {
   box-shadow: rgba(26, 23, 17, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   border-radius: 10px;
   padding: 50px;
-  margin: 20px;;
+  margin: 30px;
 }
 
 
@@ -54,29 +54,3 @@ h2 {
   background: #FFEBEB;
   color: #29202d;
 }
-
-#footer {
-  background: white ;
-  background-color: #FEF7D8;
-  background-size: auto;
-  color: #29202d;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-#footer a {
-  text-align: center;
-  color: #e7c2f6;
-  margin: 10px;
-
-}
-#footer a:hover{
-  color: #cef3f0;
-}
-
-#footer ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-  }
