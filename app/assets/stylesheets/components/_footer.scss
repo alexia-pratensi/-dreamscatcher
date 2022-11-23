@@ -1,0 +1,30 @@
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: white ;
+  background: rgb(242,217,252);
+  background: linear-gradient(259deg, rgba(255,249,214,1) 0%,  rgba(242,217,252,1) 100%);
+  background-size: auto;
+  color: #29202d;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#footer a {
+  text-align: center;
+  color: #afd6fd;
+  margin: 10px;
+
+}
+#footer a:hover{
+  color: #e7c2f6 ;
+}
+
+#footer ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
