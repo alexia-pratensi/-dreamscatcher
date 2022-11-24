@@ -1,14 +1,14 @@
+<div class="search-position">
 <div class="index-search"><%= form_with url: dreams_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Mot clé"
+    placeholder: "Rêve par mot-clé"
   %>
   <%= submit_tag "Chercher", class: "btn btn-primary search-btn" %>
-  <%# <i class="fa-regular fa-magnifying-glass"></i> %>
 <% end %>
 </div>
-
+</div>
 <div class='container index'>
   <h2><b>Choisis ici le rêve de tes rêves...</b></h2>
 
