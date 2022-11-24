@@ -1,0 +1,24 @@
+<h2><b>Mes rêves en location</b></h2>
+<%# si connecté, affiche les dreams créés %>
+
+<div class="container container-dashbord-create">
+  <% @dreams.each do |dream|%>
+    <% if dream.user == current_user %>
+      <div class="card card-dashbord-create">
+          <%= cl_image_tag dream.photo.key, crop: :fill, class:"card-img card-img-dashbord" %>
+        <div class="card-img-overlay name-price-dashbord">
+            <h5 class="card-title"><%=dream.name%></h5>
+            <h5 class="card-title"><%=dream.price%>€</h5>
+          <%# <p class="card-text"><%=dream.details</p> %>
+        </div>
+      </div>
+    <%end%>
+  <%end%>
+</div>
+<h2 class='m-5'><b>Mes réservations</b></h2>
+<%# <% @reservations.each do |reservation|%>
+<%# <% if reservation.user == current_user %>
+  <%# <h5 class="card-title"><%=reservation.dream_id.name %></h5>
+  <%# <h5 class="card-title"><%=reservation.date%></h5>
+
+<%# <%end%>

@@ -1,14 +1,14 @@
 <div class='container index'>
   <h2><b>Choisis ici le rêve de tes rêves...</b></h2>
 
-  <div class="cards-container">
+  <div class="cards-container index-cards-container">
     <% @dreams.each do |dream| %>
-      <div class="card" style="width: 18rem;">
-        <div class="image-container">
-          <%= cl_image_tag dream.photo.key, crop: :fill, class:'image-card' %>
+      <div class="card card-index" style="width: 18rem;">
+        <div class="image-container image-container-index">
+          <%= cl_image_tag dream.photo.key, crop: :fill, class:'image-card image-card-index' %>
         </div>
         <div class="card-body">
-          <div class="card-name-price">
+          <div class="card-name-price card-name-price-index">
             <h5 class="card-title"><%=dream.name%></h5>
             <h5 class="card-title price"><%=dream.price%>€</h5>
           </div>
