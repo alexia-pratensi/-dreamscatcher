@@ -1,19 +1,16 @@
 class ReservationsController < ApplicationController
-  def new
-    @dream = Dream.find(params[:dream_id])
-    @reservation = Reservation.new
-  end
 
   def create
     @dream = Dream.find(params[:dream_id])
-    # @reservation.user_id = current_user.id
     @reservation = Reservation.new(reservation_params)
     @reservation.dream = @dream
+    @reservation.user_id = current_user.id
 
     if @reservation.save
-      redirect_to dream_path(@dream), notice: 'Reservation validée !'
+      redirect_to dreams_path, notice: 'Reservation validée !'
     else
-      render :new, status: :unprocessable_entity
+      redirect_to dreams_path, notice: 'Reservation annulée !'
+      # render :new, status: :unprocessable_entity
     end
   end
 
