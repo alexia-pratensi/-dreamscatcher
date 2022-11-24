@@ -3,6 +3,12 @@ class DreamsController < ApplicationController
 
   def index
     @dreams = Dream.all
+      if params[:query].present?
+        sql_query = "name ILIKE :query OR details ILIKE :query"
+        @dreams = Dream.where(sql_query, query: "%#{params[:query]}%")
+      else
+        @dreams = Dream.all
+      end
   end
 
   def show

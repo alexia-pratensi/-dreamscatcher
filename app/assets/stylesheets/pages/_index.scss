@@ -1,2 +1,29 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.search-btn {
+  color: #29202d;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #cef3f0;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #FFEBEB;
+  color: #29202d;
+}
+
+.form-control {
+  background-color: white;
+  width: 40%;
+}
+
+.index-search {
+  display: flex;
+  justify-content: right;
+  // width: 20%;
+  margin-top: 20px;
+  border: none !important;
+  height: 30px;
+}
