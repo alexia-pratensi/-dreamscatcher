@@ -14,8 +14,8 @@
       <p> Prix : <%= @dream.price %> € </p>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Réservez !
+<button type="button" class="btn btn-primary show-btn-popup" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Réservez
 </button>
 
 <!-- Modal -->
@@ -45,7 +45,7 @@
                     <%= f.input :date, label: 'Quand souhaitez-vous rêver?' %>
                     </div>
                     <div class="modal-footer">
-                    <%= f.submit class:"btn btn-danger resa-btn", label: 'Je confirme ma réservation'%>
+                    <%= submit_tag 'Je confirme ma réservation', class:"btn btn-danger resa-btn"%>
                     <%# <button type="button" class="btn btn-primary">Save changes</button> %>
                   </div>
                   <% end %>
@@ -60,6 +60,6 @@
 
       <%# <%= link_to 'Réservez!', new_dream_reservation_path(@dream), class:'btn btn-flat' %> %>
     </div>
-      <a class="btn btn-flat" href="/dreams">Retour</a>
+      <a class="btn btn-ghost" href="/dreams">Retour</a>
   </div>
 </div>
