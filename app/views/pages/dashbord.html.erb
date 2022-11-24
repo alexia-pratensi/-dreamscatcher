@@ -9,8 +9,9 @@
         <div class="card-img-overlay name-price-dashbord">
             <h5 class="card-title"><%=dream.name%></h5>
             <h5 class="card-title"><%=dream.price%>€</h5>
-          <%# <p class="card-text"><%=dream.details</p> %>
         </div>
+          <%= link_to "Modifier", dream_path(dream), data: {turbo_method: :update, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn-edit"%>
+          <%= link_to "Supprimer", dashbord_path(dream), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
       </div>
     <%end%>
   <%end%>
@@ -30,16 +31,22 @@
           <h5 class="card-title"><%=reservation.dream.name %></h5>
           <h5 class="card-title"><%=reservation.date%></h5>
         </div>
+      </div>
     </div>
+    <%else%>
+      <p class="card-text">Vous n'avez pas encore réservé des rêves</p>
     <%end%>
-    </div>
   </div>
+<%end%>
+
+<%= link_to 'Réservez un rêve', dreams_path, class:, class:"btn-flat index-btn" %>
 
 
 
-      <img src="..." class="img-fluid rounded-start" alt="...">
+
+      <%# <img src="..." class="img-fluid rounded-start" alt="...">
 
 
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> %>

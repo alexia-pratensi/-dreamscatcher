@@ -3,9 +3,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get '/dashbord', to: "pages#dashbord"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
+  delete "dreams/:id", to: "pages#destroy"
   # root "articles#index"
   resources :dreams, except: [:show]
 
