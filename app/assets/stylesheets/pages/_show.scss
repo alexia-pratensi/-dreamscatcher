@@ -60,4 +60,50 @@ body {
 
 .modal-title {
   text-align: center !important;
+  color: #83cdc7;
+}
+
+.modal-footer {
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+}
+
+.resa-btn {
+  align-items: center;
+  border-radius: 50px;
+  color: #29202d;
+  padding: 8px 24px;
+  transition: background 0.3s ease;
+  background: #fdd9d9;
+  margin-left: 100px;
+  align-items: center;
+  border-color: transparent !important;
+}
+
+.resa-btn:hover {
+  background: #cef3f0;
+  color: #29202d;
+}
+
+.resa-dream-name {
+  margin-left: 280px;
+  color: #CC96E1;
+}
+
+.resa-price {
+  display: flex;
+  justify-content: space-around;
+  color: #CC96E1;
+  font-size: larger;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.details-price-resa {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  font-size: large;
+  align-items: center;
 }
