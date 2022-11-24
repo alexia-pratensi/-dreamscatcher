@@ -15,6 +15,7 @@ html {
   align-items: center;
   color: #29202D;
   box-sizing: unset;
+  background-size: cover;
 }
 
 .form {
@@ -31,10 +32,8 @@ html {
 .bloc {
   display: flex;
   justify-content: space-between;
-  .name-price {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  input {
+    border-radius: 30px;
   }
 }
 
@@ -62,4 +61,8 @@ html {
 .create-btn:hover {
   background: #cef3f0;
   color: #29202d;
+}
+
+.div.invalid_feedback {
+  color: black;
 }
