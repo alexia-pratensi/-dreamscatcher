@@ -9,9 +9,10 @@
       <%= cl_image_tag @dream.photo.key , crop: :fill , height: 400 , width: 700 %>
     </div>
     <div class= "show-infos" >
-      <%= @dream.details %> ! <br>
-      <p> <%= @dream.price %> € </p> <br>
-      <%= link_to 'Réservez!', new_dream_reservation_path(@dream), class:'btn btn-flat' %>
+      <h5><b><%= @dream.details %> ! </b></h5><br><br>
+      <p> <%= @dream.content %> </p> <br>
+      <p> Prix : <%= @dream.price %> € </p>
+      <%= link_to 'Réservez ce rêve', new_dream_reservation_path(@dream), class:'btn btn-flat' %>
       <a class="btn btn-flat" href="/dreams">Retour</a>
     </div>
   </div>
