@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :dreams, except: [:show]
 
   resources :dreams, only: [:show] do
-    resources :reservations, only: [:new, :create]
+    resources :reservations, only: :create
   end
 end
