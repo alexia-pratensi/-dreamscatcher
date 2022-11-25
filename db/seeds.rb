@@ -39,7 +39,7 @@ dream_joyeux.photo.attach(io: file_joyeux, filename: "joyeux.jpg", content_type:
 dream_joyeux.save
 
 file_apaisant = URI.open('https://res.cloudinary.com/dsef2i7mv/image/upload/v1669118625/apaisant_hhghgo.jpg')
-dream_apaisant = Dream.new(name: "Rêve Apaisant", details: "Un rêve relaxant,idéal pour vous ressourcer", content: "Aujourd'hui votre ami·e proche vous a réservé une journée complète dans un luxueux Spa. Au programme : détente et bien-être. Tous les soins sont à volonté. Que vous ayez envie d'un hammam,
+dream_apaisant = Dream.new(name: "Rêve Apaisant", details: "Un rêve relaxant, idéal pour vous ressourcer", content: "Aujourd'hui votre ami·e proche vous a réservé une journée complète dans un luxueux Spa. Au programme : détente et bien-être. Tous les soins sont à volonté. Que vous ayez envie d'un hammam,
   de rester toute la matinée dans un jacuzzi, ou d'avoir accès à un massage relaxant de qualité (réelles sensations comprises!) : tout est possible. La seule issue de cette journée est une disparition complète de toute forme de stress, et un ressourcement total..." , price: 70,  user: user2)
 dream_apaisant.photo.attach(io: file_apaisant, filename: "apaisant.jpg", content_type: "image/jpg")
 dream_apaisant.save
