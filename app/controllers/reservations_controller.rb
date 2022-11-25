@@ -14,6 +14,13 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+
+    redirect_to dashbord_path, status: :see_other
+  end
+
   private
 
   def reservation_params
