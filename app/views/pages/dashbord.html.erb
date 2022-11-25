@@ -13,8 +13,8 @@
             <h5 class="card-title"><%=dream.name%></h5>
             <h5 class="card-title"><%=dream.price%>€</h5>
         </div>
-          <%= link_to "Modifier", edit_dream_path(dream), data: {turbo_method: :update, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn-edit"%>
-          <%= link_to "Supprimer", destroy_dream_path(dream), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
+          <%= link_to "Modifier", edit_dream_path(dream), class:"btn-flat dashbord-btn-edit"%>
+          <%= link_to "Supprimer", destroy_dream_path(dream), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr·e ?"}, class:"btn-flat dashbord-btn"%>
       </div>
     <%end%>
   <%end%>
