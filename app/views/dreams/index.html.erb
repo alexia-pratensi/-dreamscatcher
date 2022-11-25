@@ -10,7 +10,7 @@
 </div>
 </div>
 <div class='container index'>
-  <h2><b>Choisis ici le rêve de tes rêves...</b></h2>
+  <h2><b>Choisissez ici le rêve de vos rêves...</b></h2>
 
   <div class="cards-container index-cards-container">
     <% @dreams.each do |dream| %>
@@ -24,7 +24,7 @@
             <h5 class="card-title price"><%=dream.price%>€</h5>
           </div>
           <p class="card-text"><%=dream.details%></p>
-          <%= link_to 'Découvre ce rêve', dream_path(dream), class:"btn-flat index-btn" %>
+          <%= link_to 'Découvrez ce rêve', dream_path(dream), class:"btn-flat index-btn" %>
         </div>
       </div>
       <%end%>
