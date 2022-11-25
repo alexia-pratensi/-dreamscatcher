@@ -54,8 +54,9 @@ html {
   padding: 8px 24px;
   transition: background 0.3s ease;
   background: #fdd9d9;
-  margin-left: 100px;
+  margin-left: 18%;
   align-items: center;
+  border-color: transparent !important;
 }
 
 .create-btn:hover {
@@ -65,4 +66,20 @@ html {
 
 .div.invalid_feedback {
   color: black;
+}
+
+.edit-btn {
+  border-radius: 50px;
+  color: #29202d;
+  padding: 8px 24px;
+  transition: background 0.3s ease;
+  background: #fdd9d9;
+  margin-left: 13%;
+  align-items: center;
+  border-color: transparent !important;
+}
+
+.edit-btn:hover {
+  background: #cef3f0;
+  color: #29202d;
 }
