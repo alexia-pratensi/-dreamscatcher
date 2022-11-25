@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :dreams, only: [:show] do
     resources :reservations, only: :create
   end
+  resources :reservations, only: :destroy
 end
