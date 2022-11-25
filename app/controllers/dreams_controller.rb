@@ -4,7 +4,7 @@ class DreamsController < ApplicationController
   def index
     @dreams = Dream.all
       if params[:query].present?
-        sql_query = "name ILIKE :query OR details ILIKE :query  OR content ILIKE :query"
+        sql_query = "name ILIKE :query OR details ILIKE :query OR content ILIKE :query"
         @dreams = Dream.where(sql_query, query: "%#{params[:query]}%")
       else
         @dreams = Dream.all
@@ -41,7 +41,7 @@ class DreamsController < ApplicationController
   private
 
   def dream_params
-    params.require(:dream).permit(:name, :details, :price, :photo)
+    params.require(:dream).permit(:name, :details, :content, :price, :photo)
   end
 
   def set_dream
