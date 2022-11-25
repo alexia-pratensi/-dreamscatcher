@@ -17,6 +17,7 @@ body {
   border-radius: 10px;
   margin-left: 150px;
   margin-bottom: 100px;
+  position: relative;
 }
 .show-h2 {
   text-align: center;
@@ -125,4 +126,9 @@ body {
 .show-btn-popup:hover {
   background: #cef3f0;
   color: #29202d;
+}
+
+.show-price {
+  font-weight: bold;
+  font-size: large;
 }
