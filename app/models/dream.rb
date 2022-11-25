@@ -6,4 +6,5 @@ class Dream < ApplicationRecord
   validates :details, presence: true
   validates :photo, presence: true
   validates :price, presence: true
+  validates :content, presence: true
 end

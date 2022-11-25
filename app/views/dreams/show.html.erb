@@ -8,9 +8,9 @@
     <div class= "show-img">
       <%= cl_image_tag @dream.photo.key , crop: :fill , height: 400 , width: 700 %>
     </div>
-    <div class= "show-infos" >
+    <div class= "show-infos">
       <h5><b><%= @dream.details %> ! </b></h5><br><br>
-      <p> <%= @dream.content %> </p> <br>
+      <p class='card-title'> <%= @dream.content %> </p> <br>
       <p> Prix : <%= @dream.price %> € </p>
 
 <!-- Button trigger modal -->
@@ -34,6 +34,7 @@
                 <div>
                   <%= simple_form_for [@dream, @reservation] do |f| %>
                     <h3 class='resa-dream-name'><%= @dream.name %></h3>
+                    <br>
                     <%= cl_image_tag @dream.photo.key , crop: :fill , height: 400 , width: 700 %>
                     <br>
                     <br>
