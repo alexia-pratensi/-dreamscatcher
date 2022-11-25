@@ -15,6 +15,7 @@ html {
   align-items: center;
   color: #29202D;
   box-sizing: unset;
+  background-size: cover;
 }
 
 .form {
@@ -31,10 +32,8 @@ html {
 .bloc {
   display: flex;
   justify-content: space-between;
-  .name-price {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  input {
+    border-radius: 30px;
   }
 }
 
@@ -55,11 +54,32 @@ html {
   padding: 8px 24px;
   transition: background 0.3s ease;
   background: #fdd9d9;
-  margin-left: 100px;
+  margin-left: 18%;
   align-items: center;
+  border-color: transparent !important;
 }
 
 .create-btn:hover {
+  background: #cef3f0;
+  color: #29202d;
+}
+
+.div.invalid_feedback {
+  color: black;
+}
+
+.edit-btn {
+  border-radius: 50px;
+  color: #29202d;
+  padding: 8px 24px;
+  transition: background 0.3s ease;
+  background: #fdd9d9;
+  margin-left: 13%;
+  align-items: center;
+  border-color: transparent !important;
+}
+
+.edit-btn:hover {
   background: #cef3f0;
   color: #29202d;
 }

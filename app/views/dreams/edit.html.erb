@@ -8,19 +8,22 @@
             <%= simple_form_for @dream do |f| %>
               <div class='name-price'>
               <div class='one'>
-              <%= f.input :name, label: 'Nom du rêve' %>
+              <%= f.input :name, label: 'Nom du rêve', placeholder: 'Rêve romantique' %>
+              </div>
+              <div class='photo-details'>
+              <%= f.input :details, label: 'Résumé du rêve', placeholder: "Un rêve à l'eau de rose" %>
+              </div>
+              <div>
+              <%= f.input :content, label: 'Description détaillée', placeholder: 'Décrivez votre rêve dans les détails...' %>
+              </div>
               </div>
               <div class='two'>
-              <%= f.input :price, label: 'Prix du rêve' %>
-              </div>
+              <%= f.input :price, label: 'Prix du rêve (€)', placeholder: '100' %>
               </div>
               <div class='photo-details'>
               <%= f.input :photo, as: :file %>
               </div>
-              <div class='photo-details'>
-              <%= f.input :details, label: 'Description du rêve' %>
-              </div>
-              <%= f.submit class:"btn btn-danger create-btn", label: 'Je confirme mon rêve'%>
+              <%= f.submit 'Je confirme les modifications', class:"btn btn-danger edit-btn"%>
             <% end %>
           </div>
       </div>
