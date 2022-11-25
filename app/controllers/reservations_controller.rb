@@ -7,9 +7,9 @@ class ReservationsController < ApplicationController
     @reservation.user_id = current_user.id
 
     if @reservation.save
-      redirect_to dashbord_path, notice: 'Reservation validée !'
+      redirect_to dashbord_path, notice: 'Réservation validée !'
     else
-      redirect_to dreams_path, notice: 'Reservation annulée !'
+      redirect_to dreams_path, notice: 'Réservation annulée !'
       # render :new, status: :unprocessable_entity
     end
   end
