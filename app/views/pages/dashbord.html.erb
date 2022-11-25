@@ -43,15 +43,15 @@
                   <h5 class="card-title"><%=reservation.dream.name %></h5>
                   <p class="card-title"><%=reservation.dream.details %></p>
                   <h6 class="card-title"><%=reservation.date%></h6>
-                  <%= link_to "Annuler la réservation", reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
+                  <%= link_to "Annuler la réservation", reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr·e ?"}, class:"btn-flat dashbord-btn"%>
                 </div>
               </div>
-            <%end%>
-          </div>
-        <%end%>
+            </div>
+          <%end%>
+        </div>
+      <%end%>
     </div>
   <%end%>
-</div>
 
 <div class='d-flex justify-content-center mt-5'>
   <%= link_to "☁️ Réservez un rêve", dreams_path, class:"btn-flat dashbord-btn-add mb-4"%>
