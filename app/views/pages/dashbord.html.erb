@@ -1,24 +1,31 @@
 <h2><b>Mes rêves en location</b></h2>
 <%# si connecté, affiche les dreams créés %>
 
+
 <div class="container container-dashbord-create">
   <% @dreams.each do |dream|%>
     <% if dream.user == current_user %>
       <div class="card card-dashbord-create">
-          <%= cl_image_tag dream.photo.key, crop: :fill, class:"card-img card-img-dashbord" %>
+          <%if dream.photo.key%>
+            <%= cl_image_tag dream.photo.key, crop: :fill, class:"card-img card-img-dashbord" %>
+          <%end%>
         <div class="card-img-overlay name-price-dashbord">
             <h5 class="card-title"><%=dream.name%></h5>
             <h5 class="card-title"><%=dream.price%>€</h5>
         </div>
-          <%= link_to "Modifier", dream_path(dream), data: {turbo_method: :update, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn-edit"%>
-          <%= link_to "Supprimer", dashbord_path(dream), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
+          <%= link_to "Modifier", edit_dream_path(dream), data: {turbo_method: :update, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn-edit"%>
+          <%= link_to "Supprimer", destroy_dream_path(dream), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
       </div>
     <%end%>
   <%end%>
 </div>
+<div class='d-flex justify-content-center mt-5'>
+  <%= link_to "☁️ Ajouter un rêve", new_dream_path, class:"btn-flat dashbord-btn-add"%>
+</div>
+
 
 <h2 class='m-5'><b>Mes réservations</b></h2>
-<div class="container container-dashbord-res ml-15">
+<div class="container container-dashbord-res">
   <% @reservations.each do |reservation|%>
     <div class="card mb-3 card-dashbord-res" style="max-width: 540px;">
       <% if reservation.user == current_user %>
@@ -27,19 +34,23 @@
           <%= cl_image_tag reservation.dream.photo.key, crop: :fill, class:"card-img card-img-dashbord-two" %>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body card-body-dashbord">
             <h5 class="card-title"><%=reservation.dream.name %></h5>
             <p class="card-title"><%=reservation.dream.details %></p>
-            <h5 class="card-title"><%=reservation.date%></h5>
+            <h6 class="card-title"><%=reservation.date%></h6>
+            <%= link_to "Annuler la réservation", reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Confirmer"}, class:"btn-flat dashbord-btn"%>
           </div>
         </div>
       </div>
       <%else%>
-        <p class="card-text">Vous n'avez pas encore réservé des rêves</p>
+      <div class='container'>
+        <p class="card-text">Vous n'avez pas encore réservé de rêves...🌈</p>
+      </div>
       <%end%>
     </div>
   <%end%>
 </div>
-<div class="container mt-10">
-  <%= link_to 'Réservez un rêve', dreams_path, class:"btn-flat btn-dashbord-res" %>
+
+<div class='d-flex justify-content-center mt-5'>
+  <%= link_to "☁️ Réservez un rêve", dreams_path, class:"btn-flat dashbord-btn-add"%>
 </div>
