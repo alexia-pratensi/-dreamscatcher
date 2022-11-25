@@ -9,9 +9,9 @@
       <%= cl_image_tag @dream.photo.key , crop: :fill , height: 400 , width: 700 %>
     </div>
     <div class= "show-infos">
-      <h5><b><%= @dream.details %> ! </b></h5><br><br>
+      <h5><b><%= @dream.details %> ! </b></h5><br>
+      <p class='show-price'><%= @dream.price %> € </p>
       <p class='card-title'> <%= @dream.content %> </p> <br>
-      <p> Prix : <%= @dream.price %> € </p>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary show-btn-popup" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -44,7 +44,7 @@
                     <p class='resa-price'><%= @dream.price %> € </p>
                     </div>
                     <div class='show-date'>
-                    <%= f.input :date, label: 'Quand souhaitez-vous rêver?' %>
+                    <%= f.input :date, use_month_names: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'], label: 'Quand souhaitez-vous rêver?' %>
                     </div>
                     <div class="modal-footer">
                     <%= submit_tag 'Je confirme ma réservation', class:"btn btn-danger resa-btn"%>
